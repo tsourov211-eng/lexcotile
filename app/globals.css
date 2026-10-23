@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-roboto), Arial, sans-serif;
+    color: #333333;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #ffffff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h5,
+  h6 {
+    font-family: var(--font-alice), Georgia, serif;
+    font-weight: 400;
+    color: #5b4b3f;
+  }
+
+  h4 {
+    font-family: var(--font-roboto), Arial, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #5b4b3f;
+    letter-spacing: 0px;
+  }
+}
+
+/* Custom Strike-through heading */
+.strike-through {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  font-family: var(--font-roboto), Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #5b4b3f;
+  font-size: 30px;
+  line-height: 1;
+  padding-bottom: 1.333em;
+  white-space: nowrap;
+}
+
+.strike-through::before,
+.strike-through::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid #c7bdb5;
+}
+
+.strike-through::before {
+  margin-right: 1.5rem;
+}
+
+.strike-through::after {
+  margin-left: 1.5rem;
+}
+
+/* Dropdown triangle */
+.nav-triangle {
+  width: 0;
+  height: 0;
+  border-left: 11.5px solid transparent;
+  border-right: 11.5px solid transparent;
+  border-bottom: 11px solid #bbbbbd;
+  margin: 0 auto;
+}
+
+/* Smooth zoom transition on cards */
+.tile-hover-card {
+  transition: transform 0.5s ease-in-out;
+}
+.tile-hover-card:hover {
+  transform: scale(1.08);
+}
